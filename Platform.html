@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DAA</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+      table {
+          width: 100%;
+          border-collapse: collapse;
+      }
+      th, td {
+          border: 1px solid #000;
+          padding: 8px;
+          text-align: left;
+      }
+      th {
+          background-color: #f2f2f2;
+      }
+  </style>
+  </head>
+<body>
+     <!-- Header Section -->
+     <div class="header">
+        <a href="">DAA</a>
+        <div class="tt">
+            <a href="index.html">
+                <span class="tit">Home</span>
+            </a>
+            <a href="project.html">
+                <span class="tit">Course Project</span>
+            </a>
+            <a href="reflections.html">
+            <span class="tit">Learning Reflections</span>
+        </a>
+        <a href="student.html">
+            <span class="tit"><button>Student Details</button></span>
+        </a>
+        </div>
+        <!-- Mobile Menu Toggle Button -->
+        <div class="mobile-menu-toggle" onclick="toggleMenu()">
+            &#9776; <!-- Hamburger Icon -->
+        </div>
+    </div>
+    <section>
+        <div class="clearfix">
+            <div class="text2" style="margin-top: -10px;">
+                <h1 style="font-size: 60px;">Module </h1>
+                <h1 style="font-size: 60px;">Description</h1>
+              </div>              
+          
+        </div>
+    </section>
+    <div class="line"></div>
+    <section>
+        <div class="headdddd" >
+        <h1 style="font-size: 25px;">Long bridges and subways in the railway station hinders quick movement of people between platforms.</h1>
+        </div>
+                        
+           
+    </section>
+   <section>
+    <div class="topic">
+      <h3>WHY THIS TOPIC?</h3>
+      <p>
+        As of my  personal experience : 
+When I was once travelling from Hubli to Hospet through , took a ticket in platform 1 but had that train departure on platform no 6 which was too far. Me and my friend couldn’t make it till platform no 6 and get onto it even we asked a quick transport but it was still not possible. <br>
+Because:
+<ol>
+  <li>The entrance of railway station always starts from platform no 1  and we have to take the tickets in platform no 1 itself and then run towards the train to the other  platform.</li>
+  <li>To move between platforms for eg: from P1 to P5 you had to take a long path move through the stage cross a long bridge which would take a lot of time.</li>
+  <li>There is no  short paths (shortcuts) between platforms for the people departure and arrival to the exit and entry  points of the railway station respectively.</li>
+</ol><br><br><br><br>
+<h3>a. Functionality Selection</h3>
+
+   
+
+    <table>
+        <thead>
+            <tr>
+                <th>Si. No.</th>
+                <th>Functionality Name</th>
+                <th>Known</th>
+                <th>Unknown</th>
+                <th>Principles Applicable</th>
+                <th>Algorithms</th>
+                <th>Data Structures</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Platform Navigation System</td>
+                <td>Long path, bridge, platform layout</td>
+                <td>Real-time crowd density, traversal time</td>
+                <td>User experience design, Path optimization</td>
+                <td>Dijkstra Algorithm</td>
+                <td>Graph, Map</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Quick Transport Between Platforms</td>
+                <td>No short paths, need for quick transport</td>
+                <td>Feasibility, potential routes</td>
+                <td>Efficiency, Accessibility</td>
+                <td>Pathfinding algorithms</td>
+                <td>Priority Queue, Linked List</td>
+            </tr>
+        </tbody>
+    </table>
+
+
+
+      </p>
+   </div>
+   </section>
+   <section>
+    <div class="b2">
+      <br>
+      <h3>b.Functionality Analysis</h3>
+      <br>
+      <p>For each module you have implemented, describe your workflow and write its efficiency analysis. Create as many sub headings as necessary. It is compulsory to do efficiency analysis for each module. </p>
+      <br><h3> Quick Transport Between Platforms</h3>
+      <br>
+     
+     <p>To create a Direct Movable Bridge above the Track itself for the easiest movement between one platform to another especially helpful for old age people and children.</p>
+<br><br>
+<h3>Constraints ( The solution is only applicable if :) </h3> 
+<ol>
+  <br>
+  <li>Ticket counters are on the first, middle, and last platforms so that people do not have to much travel to take the ticket and then run .</li>
+  <li>There are separate entry and exit points in the first and last platforms. </li>
+  <li>Train arrival and departure time  of the adjacent platforms should be same.</li>
+</ol>  
+<br><br> 
+<h3>Assumptions </h3>
+<ol>
+  <br>
+  <li>Access to a train schedule or a train detection system.</li>
+  <li>The bridge is represented by a state variable (bridge_state) that toggles between "deployed" and "retracted."</li>
+</ol>
+<br><br>
+<h3>The algorithm used to find the shortest path as a bridge – Floyd Algorithm</h3>
+<h3>A simple illustration of How the shortest path is found as a solution of quick movememt Using Floyd algorithm.</h3>
+<img src="floyd.jpg" alt="Floyd Algorithm Diagram" style="width: 500px; display: block; margin: 0 auto;">
+<h3>Explanation :</h3>
+<br>
+<p>
+  Assume 3 pairs  A to B and B to C for the stairs and B to C for the pavement.
+The passenger wants to move to point D  assuming the train is on the other side.
+So to move from platform one to platform 2 He can directly have a path from A to D 
+A direct path can be proved through the Floyd algorithm.
+
+</p><br>
+<p>
+  And the movement of the bridge can be through this pseudo code-  <br>
+  <br>
+If(train_arrival <=5) //If the train arrival is in 5 minutes <br>
+{<br>
+    Print(“Retract the Bridge”) // Remove the Bridge <br>
+}<br>
+
+Else <br>
+{<br>
+ Print (“Deployed the bridge”) //Keep the bridge <br>
+} <br>
+The real application of this problem includes a lot more concepts as below:
+ Train Schedule: This code uses a simulated train schedule. In a real-world scenario, this could be replaced with live data from sensors or APIs.
+  Threshold Logic: The bridge retracts when a train is within 10 minutes of arrival.
+ Simulation: The simulate function runs a loop to periodically check the train schedule and update the bridge state.
+  Extensibility: You can enhance this code by integrating real-time APIs or hardware control (e.g., using GPIO pins on a Raspberry Pi).
+
+</p>
+</p>
+<br>
+<h3>c.Conclusion</h3>
+<br>
+<p>During the project working </p>
+<ol>
+  <br>
+  <li>Knowledge of the algorithms using it in real scenarios explores a lot of understanding of the subject back to the mind</li>
+  <li>We cant use direct algorithms as a solution to any real problem in the world. We need to modify it and apply it accordingly.</li>
+
+</ol><br><br>
+<a href="https://github.com/Suman-stack782/code.git" style="display: flex; justify-content: center; text-decoration: none;">
+  <button style="padding: 10px 20px; font-size: 16px; cursor: pointer; border: none; background-color: #007BFF; color: white; border-radius: 5px;">
+    CODE IMPLEMENTATION
+  </button>
+</a>
+</div>
+   </section>
+     <!--Footer-->
+
+     <section class="footer ">
+
+      <div class="box-container ">
+    
+          <div class="box ">
+              <h3>DAA Portfolio</h3>
+              <p>Thank you for visiting<br/>  Keep Rising 🚀</p><br>
+          </div>
+    
+          <div class="box ">
+              <h4>Quick links</h4>
+              <a href="index.html" style="color: #fff;" onmousedown="this.style.color='blue';" onmouseup="this.style.color='white';"><i class="fas fa-chevron-circle-right"></i> home</a>
+              <a href="project.html" style="color: #fff;" onmousedown="this.style.color='blue';" onmouseup="this.style.color='white';"><i class="fas fa-chevron-circle-right"></i> Course Project</a>
+              <a href="reflections.html" style="color: #fff;" onmousedown="this.style.color='blue';" onmouseup="this.style.color='white';"><i class="fas fa-chevron-circle-right"></i> Learning Reflections</a>
+
+          <!--    <a href="#education"><i class="fas fa-chevron-circle-right"></i> education</a>-->
+       
+          </div>
+      </div>
+    
+      <h1 class="credit ">Designed by SUMAN MOGALI</h1>
+      <p class="copyright ">© 2024 DESIGN AND ANALYSIS OF ALGORITHMS. All rights reserved.</p>
+    </section>
+   
+    
+ 
+</body>
+</html>
